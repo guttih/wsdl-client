@@ -1,0 +1,33 @@
+{
+  "name": "wsdl-client",
+  "version": "1.0.0",
+  "description": "Generate a page from wsdl from a running soap service",
+  "main": "src/index.ts",
+  "scripts": {
+    "start": "nodemon src/index.ts",
+    "dev": "ts-node-dev --respawn src/index.ts",
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "tsc -p ."
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/guttih/wsdl-client.git"
+  },
+  "author": "guttih",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/guttih/wsdl-client/issues"
+  },
+  "homepage": "https://github.com/guttih/wsdl-client#readme",
+  "dependencies": {
+    "@types/node": "^14.14.3",
+    "express": "^4.17.1",
+    "nodemon": "^2.0.6",
+    "soap": "^0.33.0",
+    "ts-node": "^9.0.0",
+    "typescript": "^4.0.3"
+  },
+  "devDependencies": {
+    "ts-node-dev": "^1.0.0"
+  }
+}
