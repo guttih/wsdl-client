@@ -23,12 +23,13 @@
   "dependencies": {
     "@types/node": "^14.14.3",
     "express": "^4.17.1",
-    "nodemon": "^2.0.6",
     "soap": "^0.33.0",
+    "nodemon": "^2.0.6",
     "ts-node": "^9.0.0",
     "typescript": "^4.0.3"
   },
   "devDependencies": {
+    "@typescript-eslint/parser": "^4.6.0",
     "ts-node-dev": "^1.0.0"
   }
 }

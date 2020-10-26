@@ -15,3 +15,7 @@ This project is **NOT** finished
      ```
      npm run dev
      ```
+
+## Development
+  1. install development packages `npm i -D`
+  2. run nodemon `npm run dev`
