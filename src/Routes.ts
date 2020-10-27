@@ -1,6 +1,6 @@
 import {Request, Response} from "express";
-import {GetAaetladurFaedingardagur, GetAaetladurFaedingardagurByKennitala, GetFaedingarorlofstekjur, GetFaedingarorlofstekjurByKennitala} from "./Controller";
-import {MakePage} from "./libs/InfoPage";
+import {ServiceInformation, GetAaetladurFaedingardagur, GetAaetladurFaedingardagurByKennitala, GetFaedingarorlofstekjur, GetFaedingarorlofstekjurByKennitala} from "./Controller";
+import {MakeHelpPage} from "./libs/InfoPage";
 
 class Routes {
 
@@ -10,11 +10,13 @@ class Routes {
     public routes(app): void {
         app.route('/')
             .get((request: Request, response: Response) => {
-                
+                GetAaetladurFaedingardagur
                 response.status(200)
-                    .send(MakePage('Vinnumálastofnun', 'Þjónusta sem gefur aðgang að upplýsingum frá soap þjónustu vinnumálastofnunar'));
+                    .send(MakeHelpPage('Soap vefþjónustuupplýsingar', 'Sækir upplýsingar um soap þjónustu.'));
                     console.log('Root OK')
             });
+        app.route('/info')
+            .get(ServiceInformation);
 
         app.route('/aaetladurfaedingardagur')
             .get(GetAaetladurFaedingardagur);
